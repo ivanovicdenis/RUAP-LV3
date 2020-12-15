@@ -72,6 +72,11 @@ $db = "ruapdb";
  catch(Exception $e){
  die(var_dump($e));
  }
+ 
+ $sql_create = "CREATE TABLE registration_tbl(id INT NOT NULL
+AUTO_INCREMENT, PRIMARY KEY(id), name VARCHAR(30), email
+VARCHAR(30), date DATE);
+";
 
 
 // Insert registration info
