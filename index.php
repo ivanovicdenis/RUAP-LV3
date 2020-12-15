@@ -65,13 +65,15 @@ $pwd = "Kokosinjac111!";
 $db = "ruapdb";
 // Connect to database.
 
- try {
- $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
- $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
- }
- catch(Exception $e){
- die(var_dump($e));
- }
+$conn = mysqli_connect($host, $user, $pwd, $db);
+if (mysqli_connect_errno())
+{
+echo "<h3>Failed to connect to MySQL:</h3> " . mysqli_connect_error();
+}
+ else
+{
+// echo '<h3>Connected successfully</h3>';
+}
  
  $sql_create = "CREATE TABLE registration_tbl(id INT NOT NULL
 AUTO_INCREMENT, PRIMARY KEY(id), name VARCHAR(30), email
