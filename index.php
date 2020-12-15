@@ -72,7 +72,7 @@ echo "<h3>Failed to connect to MySQL:</h3> " . mysqli_connect_error();
 }
  else
 {
-// echo '<h3>Connected successfully</h3>';
+ echo '<h3>Connected successfully</h3>';
 }
  
  $sql_create = "CREATE TABLE registration_tbl(id INT NOT NULL
